@@ -2234,7 +2234,7 @@ function executeAction(action,tag,parent,index,source,executortag)
    	if(action.tag == "this") then
    		action.tag = executortag
 		action.executortag = executortag
-		print("sss"..executortag)
+		--print("sss"..executortag)
 	end
    	
    	checkContext(action)
@@ -8370,7 +8370,7 @@ function executeAction(action,tag,parent,index,source,executortag)
 										for k,v in pairs(cyberscript.EntityManager) do
 											
 											if(v.id == entity.id) then
-												print("delete k")
+												--print("delete k")
 												cyberscript.EntityManager[k] = nil
 											end
 											
@@ -10168,7 +10168,7 @@ function executeAction(action,tag,parent,index,source,executortag)
 					cyberscript.GroupManager["temp_enemy_around_group"] = {}
 					cyberscript.GroupManager["temp_enemy_around_group"].tag = "temp_enemy_around_group"
 					cyberscript.GroupManager["temp_enemy_around_group"].entities = {}
-					print(#parts)
+					--print(#parts)
 				
 					for _, v in ipairs(parts) do
 						local newent = v:GetComponent(v):GetEntity() 
@@ -14723,7 +14723,7 @@ function GenerateTextFromContextValues(context, v,source)
 	if(v.type == "executortag") then
 		
 		if(source.executortag ~= nil) then
-			print(source.executortag)
+			--print(source.executortag)
 			value = source.executortag
 		end
 		

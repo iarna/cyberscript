@@ -126,7 +126,7 @@ function NewHudPhoneGameController_OnContactSelectionChanged(this,evt)
 
 	if(observerthread4  == true or moddisabled == true or (phonetest ~= true and phonetest ~= nil))    then return end
 	GameController["NewHudPhoneGameController"] = this
-	print("NewHudPhoneGameController_OnContactSelectionChanged")
+	--print("NewHudPhoneGameController_OnContactSelectionChanged")
 	
 	currentPhoneConversation = nil
 	

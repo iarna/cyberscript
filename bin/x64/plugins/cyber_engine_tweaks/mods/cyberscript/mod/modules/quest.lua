@@ -229,7 +229,7 @@ function QuestThreadManager()
 				
 					local resettag = currentQuest.tag
 					closeQuest(currentQuest)
-						print("dsqqzsqs")
+						--print("dsqqzsqs")
 					QuestManager.resetQuestfromJson(resettag)
 					setScore(resettag,"Score",-1)
 					
@@ -248,7 +248,7 @@ function QuestThreadManager()
 			
 			
 			if(canDoEndAction) then
-				print("test5 ")
+				--print("test5 ")
 				if(DoedEndAction == false and canwaitend == false) then
 					
 					DoedEndAction = true
@@ -729,7 +729,7 @@ function TrackObjective()
 			end
 			
 			
-			print(getScoreKey(quest.tag,"Score"))
+			--print(getScoreKey(quest.tag,"Score"))
 			
 			if(quest ~= nil and (getScoreKey(quest.tag,"Score") == nil or getScoreKey(quest.tag,"Score") <= 3) and currentQuest == nil ) then
 				
@@ -743,9 +743,9 @@ function TrackObjective()
 		
 		currentObjectiveId = trackedObjectiveId
 		
-		print("TrackObjective")
-		printbool(QuestManager.IsTrackingObjective())
-		print(currentObjectiveId)
+		--print("TrackObjective")
+		--printbool(QuestManager.IsTrackingObjective())
+		--print(currentObjectiveId)
 		
 	elseif currentObjectiveId ~= 0  then
 		

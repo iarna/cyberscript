@@ -1732,7 +1732,7 @@ function ImageFrame()
 			
 			ImGui.SetWindowPos(  v.position.x * screenRatioX, v.position.y * screenRatioY)
 			
-			print(v.texture)
+			--print(v.texture)
 			ImGui.Image(v.texture)
 			
 			

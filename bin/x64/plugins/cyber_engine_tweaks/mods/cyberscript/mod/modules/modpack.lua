@@ -1383,8 +1383,8 @@ function FillCharacterArchive()
 	end
 	
 	
-	print("Making Character "..ent.data.name)
-	print("Falt Character "..GameDump(TweakDB:GetFlat(ent.data.name..".entityTemplatePath")))
+	--print("Making Character "..ent.data.name)
+	--print("Falt Character "..GameDump(TweakDB:GetFlat(ent.data.name..".entityTemplatePath")))
 	local parent = {}
 	for i,v in ipairs(cyberscript.entities) do
 	

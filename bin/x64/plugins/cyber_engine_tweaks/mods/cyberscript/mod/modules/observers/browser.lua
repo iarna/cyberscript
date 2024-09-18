@@ -1685,7 +1685,7 @@ function WebPage_FillPageFromJournal(self,page)
 		local root = self:GetRootWidget()
 		
 		pcall(function()
-			printChild(root)
+			--printChild(root)
 		end)
 		
 		

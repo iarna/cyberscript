@@ -110,7 +110,7 @@ if spawnRegion then
 		
 		
 		if(enti ~= nil) then
-			print(tostring(isinstant))
+			--print(tostring(isinstant))
 			Game.GetWorkspotSystem():SendJumpToAnimEnt(enti, anim_cname, isinstant)
 		
 		end
@@ -131,8 +131,8 @@ if spawnRegion then
 	end
 	
 	function spawnCustomAnimationWorkspot(entitytag,entname,anim_cname,workspot,isinstant,unlockcamera,angle)
-		print(anim_cname)
-		print(workspot)
+		--print(anim_cname)
+		--print(workspot)
 		local obj = getEntityFromManager(entitytag)
 		local enti = Game.FindEntityByID(obj.id)
 		
@@ -403,9 +403,9 @@ if spawnRegion then
 					if dontregister == nil then dontregister = false end
 				
 					if(NPC ~= nil and dontregister == false) then
-						print(chara)
-						print(NPC)
-				print(dontregister)
+						--print(chara)
+						--print(NPC)
+				--print(dontregister)
 						local entity = {}
 						entity.id = NPC
 						if(name ~= nil and name ~= "") then
@@ -1952,14 +1952,14 @@ if actionRegion then
 				rot =  GetSingleton('Quaternion'):ToEulerAngles(objlook:GetWorldOrientation())
 				end
 				
-				print(dump(position))
-				print(dump(rot))
-				print(GameDump(objlook))	
-					Game.GetTeleportationFacility():Teleport(objlook, Vector4.new(position.x, position.y, position.z,1) , rot)
+				--print(dump(position))
+				--print(dump(rot))
+				--print(GameDump(objlook))
+				--	Game.GetTeleportationFacility():Teleport(objlook, Vector4.new(position.x, position.y, position.z,1) , rot)
 			end
 			else
 			
-			print("nope")
+			--print("nope")
 		end
 		
 		
@@ -2289,7 +2289,7 @@ if attitudeRegion then
 			
 			targetAttAgent:SetAttitudeTowards(targets:GetAttitudeAgent(), Enum.new("EAIAttitude", "AIA_Friendly"))
 			
-			print("fruend")
+			--print("fruend")
 			cyberscript.EntityManager[tag].attitudechanged = true
 			
 			ToggleImmortal(enti, false)
@@ -2526,7 +2526,7 @@ if vehiculeRegion then
 		if (('string' == type(chara)) and (string.match(tostring(chara), "AMM_Vehicle.") == nil or (string.match(tostring(chara), "AMM_Vehicle.") ~= nil and AMM ~= nil)  )  )then
 			
 			
-			print(spawn_system)
+			--print(spawn_system)
 			
 			isprevention = isprevention or false
 			
@@ -2573,15 +2573,15 @@ if vehiculeRegion then
 						
 						npcSpec.tags = {"CyberScript","CyberScript.Vehicle","CyberScript.Vehicle."..tag}
 						if(Game.GetDynamicEntitySystem():IsPopulated("CyberScript.Vehicle."..tag) == true) then Game.GetDynamicEntitySystem():DeleteTagged("CyberScript.Vehicle."..tag) end
-						print(chara)
-						print(appearance)
+						--print(chara)
+						--print(appearance)
 						if(Game.GetDynamicEntitySystem():IsPopulated("CyberScript.Vehicle."..tag) == false) then
-						print("dsdddd")
+						--print("dsdddd")
 							NPC = Game.GetDynamicEntitySystem():CreateEntity(npcSpec)
 							if dontregister == nil then dontregister = false end
 							if(NPC ~= nil and dontregister == false) then
 								local entity = {}
-								print("test")
+								--print("test")
 								entity.id = NPC
 								entity.spawntimespan = os.time(os.date("!*t"))+0
 								entity.despawntimespan = os.time(os.date("!*t"))+despawntimer
@@ -2642,7 +2642,7 @@ if vehiculeRegion then
 							end
 						
 						else
-						print("already spawsn")
+						--print("already spawsn")
 						end
 					
 					
@@ -3020,7 +3020,7 @@ if vehiculeRegion then
 				
 				
 				
-				print("Test11")
+				--print("Test11")
 				local entityobj = nil
 				local entity = nil
 				
@@ -3048,7 +3048,7 @@ if vehiculeRegion then
 					if(seat ~= nil) then
 						
 						if(entitytag == "player") then
-							print("Test11")
+							--print("Test11")
 							local player = Game.GetPlayer()
 							
 							local data = NewObject('handle:gameMountEventData')
@@ -3075,7 +3075,7 @@ if vehiculeRegion then
 				else
 							
 							
-							print("Test11")
+							--print("Test11")
 							-- local command = 'AIUnmountCommand'
 							-- local cmd = NewObject(command)
 							-- local mountData = NewObject('handle:gameMountEventData')
@@ -3308,12 +3308,12 @@ if vehiculeRegion then
 			end
 			
 			function VehicleGoToXYZ(vehiculetag, x, y, z,minspeed,maxspeed, cleartraffic)
-				print(vehiculetag)
-				print(x)
-				print(y)
-				print(z)
-				print(minspeed)
-				print(maxspeed)
+				--print(vehiculetag)
+				--print(x)
+				--print(y)
+				--print(z)
+				--print(minspeed)
+				--print(maxspeed)
 				
 				
 				local vehiculeobj =  getEntityFromManager(vehiculetag)

@@ -318,7 +318,7 @@ function getNPCCallableByAffinity()
 							
 	
 			if(v.data.display == "phone_service" and checkTriggerRequirement(v.data.requirement,v.data.trigger))then
-			print(v.data.name)
+			--print(v.data.name)
 				local contactdata = {}
 				contactdata.name =  getLang(v.data.name)
 				contactdata.id =  v.data.tag

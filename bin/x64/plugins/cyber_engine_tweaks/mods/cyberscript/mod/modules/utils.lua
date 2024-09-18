@@ -1736,7 +1736,7 @@ function removeFixersPoint()
 	for k,v in pairs(cyberscript.cache["fixer"]) do
 		if(mappinManager[cyberscript.cache["fixer"][k].data.tag] ~= nil) then
 			deleteMappinByTag(cyberscript.cache["fixer"][k].data.tag)
-			print(cyberscript.cache["fixer"][k].data.tag)
+			--print(cyberscript.cache["fixer"][k].data.tag)
 	  end
 	end
 		

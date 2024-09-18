@@ -323,10 +323,10 @@ function mainThread(active)-- update event when mod is ready and in game (main t
 				offset.y = 2
 				offset.z = 1
 				local offsetpos = getForwardPosition2(Game.GetPlayer(),3,offset)
-				print("offsetpos"..dump(offsetpos))
+				--print("offsetpos"..dump(offsetpos))
 				local poss = offsetpos
 				poss.z = poss.z + offset.z +  playerAngle.z
-				print(dump(poss))
+				--print(dump(poss))
 				-- poss.x = poss.x + playerDeltaPos.x
 				-- poss.y = poss.y + playerDeltaPos.y
 				-- poss.z = poss.z + playerDeltaPos.z
@@ -904,7 +904,7 @@ function inGameInit() -- init some function after save loaded
 	end)
 	if(codewareIsInstalled == true) then
 	local storedentity =  Game.GetDynamicEntitySystem():GetTaggedIDs("CyberScript")
-	print("storedentity"..dump(storedentity))
+	--print("storedentity"..dump(storedentity))
 	for i,entid in ipairs(storedentity) do
 		
 		local tags = Game.GetDynamicEntitySystem():GetTags(entid)
@@ -918,7 +918,7 @@ function inGameInit() -- init some function after save loaded
 		  	table.insert(tagsString,Game.NameToString(v))
 		
 		end
-		print("tagsString"..dump(tagsString))
+		--print("tagsString"..dump(tagsString))
 		local cstag = ""
 		
 		if(table_contains(tagsString,"CyberScript.NPC")) then
@@ -973,7 +973,7 @@ function inGameInit() -- init some function after save loaded
 	
 	else
 	
-	print("no codeware founded")
+	--print("no codeware founded")
 	
 	end
 	if(showcyberscriptfixeronmap) then
@@ -1003,7 +1003,7 @@ pcall(function()
 	Game.GetSettingsSystem():GetVar("/gameplay/performance", "CrowdDensity"):SetValue("High")
 	cyberscript.language = Game.GetSettingsSystem():GetVar("/language", "OnScreen"):GetValue().value
 end)
-	print(getLang("seestarted"))
+	--print(getLang("seestarted"))
 end
 
 
@@ -1750,7 +1750,7 @@ function runSubActionList(actionlist, tag, parent, source, isquest,executortag,b
 		
 		if(workerTable[tag] == nil) then
 			local copy = deepcopy(actionlist, copies)
-		print(tag)
+		--print(tag)
 			-- for k,v in pairs(copy) then
 			-- copy[k]["active"] = true
 			-- end
@@ -2065,7 +2065,7 @@ function checkFixer()
 			
 			oldfixer = deepcopy(currentfixer,nil)
 			if(fixerIsSpawn == false and currentfixer.exist == false and currentfixer.npcexist == false and cyberscript.EntityManager[currentfixer.tag] == nil) then
-				print(currentfixer.tag)
+				--print(currentfixer.tag)
 				
 				
 				local twkVehi = TweakDBID.new(currentfixer.tweakid)
@@ -5307,7 +5307,7 @@ end
 function getAIAnswerOrDefault(tag)
 	
 	if(AIhandler[tag] ~= nil and AIhandler[tag].answer ~= nil) then
-	print(AIhandler[tag].answer)
+	--print(AIhandler[tag].answer)
 		return AIhandler[tag].answer
 	end
 	

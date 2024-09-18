@@ -636,7 +636,7 @@ function QuestManager.MarkQuestAsActive(entryId)
 end
 
 function QuestManager.MarkQuestASucceeded(entryId)
-	print("ddd)")
+	--print("ddd)")
 	if(entryId ~= nil) then
 	currentSave.savedStates[entryId] = {
 			state =3

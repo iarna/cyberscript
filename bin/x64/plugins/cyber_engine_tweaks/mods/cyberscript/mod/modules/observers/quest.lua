@@ -584,8 +584,8 @@ function QuestDetailsPanelController_OnUpdateTrackedObjectiveEvent(self, e)
 		local questId = myucurrentQuestData
 		
 		if QuestManager.IsKnownQuest(questId) then
-			print("QuestDetailsPanelController_OnUpdateTrackedObjectiveEvent")
-			print(questId)
+			--print("QuestDetailsPanelController_OnUpdateTrackedObjectiveEvent")
+			--print(questId)
 			
 			local questDef = QuestManager.GetQuest(questId)
 			
