@@ -1308,15 +1308,17 @@ function scriptcheckTrigger(trigger)
 						if(entity ~= nil) then
 							
 							if(faction ~= nil) then
-								for y=1,#faction.spawnable_npc do
+								if(faction.spawnable_npc ~= nil) then
+									for y=1,#faction.spawnable_npc do
 									
 									
 									
-									if(string.find(entity.entity_tweak,faction.spawnable_npc[y]) ~= nil)then
-										result = true
+										if(string.find(entity.entity_tweak,faction.spawnable_npc[y]) ~= nil)then
+											result = true
+										end
 									end
 								end
-								if(result == false) then
+								if(faction.keyword ~= nil and result == false) then
 									for y=1,#faction.keyword do
 										
 										

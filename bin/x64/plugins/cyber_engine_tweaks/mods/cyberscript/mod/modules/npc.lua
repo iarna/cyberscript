@@ -321,9 +321,11 @@ if spawnRegion then
 		local obj = getEntityFromManager(entitytag)
 		local enti = Game.FindEntityByID(obj.id)
 		
-		cyberscript.EntityManager[entitytag].animation = nil
-		cyberscript.EntityManager[entitytag].workspot_ent = nil
-		cyberscript.EntityManager[entitytag].workspot_name = nil
+		if(cyberscript.EntityManager[entitytag] ~= nil) then
+			cyberscript.EntityManager[entitytag].animation = nil
+			cyberscript.EntityManager[entitytag].workspot_ent = nil
+			cyberscript.EntityManager[entitytag].workspot_name = nil
+		end
 		if(enti ~= nil) then
 			
 			
