@@ -7910,8 +7910,8 @@ function executeAction(action,tag,parent,index,source,executortag)
 									error("group with tag : "..action.group.." doesn't exist")
 								end
 							end
-							else
-							error("bad character or position. character tweak : "..chara.." position : "..dump(position))
+							--else
+							--error("bad character or position. character tweak : "..chara.." position : "..dump(position))
 						end
 					end
 				end
